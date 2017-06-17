@@ -2,9 +2,12 @@
 #define AS3935_h
 #include "Arduino.h"
 
-static const int INT_STRIKE = 0x08;
-static const int INT_DISTURBER = 0x04;
-static const int INT_NOISE = 0x01;
+static const uint8_t AS3935_INT_STRIKE = 0x08;
+static const uint8_t AS3935_INT_DISTURBER = 0x04;
+static const uint8_t AS3935_INT_NOISE = 0x01;
+static const int8_t  AS3935_DISTANCE_OUT_OF_RANGE = -2;
+static const uint8_t AS3935_AFE_INDOOR =  0b10010;
+static const uint8_t AS3935_AFE_OUTDOOR = 0b01110;
 
 class AS3935
 {
@@ -20,6 +23,17 @@ public:
     void setDefault(void);
     void calibrateRCO(void);
     void disableOscillators(void);
+    uint8_t getIntrruptReason(void);
+    int8_t getDistance(void);
+    bool isIndoor(void);
+    bool setIndoor(void);
+    bool setIndoor(bool enable);
+    bool isOutdoor(void);
+    bool setOutdoor(void);
+    bool setOutdoor(bool enable);
+    uint8_t getMinimumLightning(void);
+    bool setMinimumLightning(uint8_t);
+    void clearStats(void);
 
 private:
     uint8_t _i2c_address;
