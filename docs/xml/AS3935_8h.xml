@@ -121,7 +121,7 @@
 <codeline lineno="12" refid="classAS3935" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAS3935" kindref="compound">AS3935</ref></highlight></codeline>
 <codeline lineno="13"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935" kindref="compound">AS3935</ref>(uint8_t<sp/>i2c_address,<sp/>uint8_t<sp/>int_pin);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1ac8546848906ceee3d8265eae7307695b" kindref="member">AS3935</ref>(uint8_t<sp/>address,<sp/>uint8_t<sp/>interruptPin);</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="classAS3935" kindref="compound">AS3935</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a75542117963fb6a48f6bf257bca06c41" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a75542117963fb6a48f6bf257bca06c41" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sda,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scl);</highlight></codeline>
@@ -145,10 +145,10 @@
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" kindref="member">clearStats</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>_i2c_address;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>_int_pin;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>_default_sda<sp/>=<sp/>SDA;<sp/></highlight><highlight class="comment">//<sp/>D4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>_default_scl<sp/>=<sp/>SCL;<sp/></highlight><highlight class="comment">//<sp/>D5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>_address;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>_interruptPin;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>_defaultSDA<sp/>=<sp/>SDA;<sp/></highlight><highlight class="comment">//<sp/>D4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>_defaultSCL<sp/>=<sp/>SCL;<sp/></highlight><highlight class="comment">//<sp/>D5</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>_getShift(uint8_t<sp/>mask);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
