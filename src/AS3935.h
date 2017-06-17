@@ -2,9 +2,9 @@
 #define AS3935_h
 #include "Arduino.h"
 
-static const int INT_STRIKE = 0x08;
-static const int INT_DISTURBER = 0x04;
-static const int INT_NOISE = 0x01;
+static const uint8_t AS3935_INT_STRIKE = 0x08;
+static const uint8_t AS3935_INT_DISTURBER = 0x04;
+static const uint8_t AS3935_INT_NOISE = 0x01;
 
 class AS3935
 {
@@ -20,6 +20,7 @@ public:
     void setDefault(void);
     void calibrateRCO(void);
     void disableOscillators(void);
+    uint8_t getIntrruptReason(void);
 
 private:
     uint8_t _i2c_address;

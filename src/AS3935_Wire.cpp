@@ -131,3 +131,12 @@ void AS3935::disableOscillators(void)
 {
     writeRegisterWithMask(0x08, 0xE0, 0x00);
 }
+
+/**
+ * Get intrrupt reason
+ * @return one of AS3935_INT_STRIKE, AS3935_INT_DISTURBER, AS3935_INT_NOISE
+ */
+uint8_t AS3935::getIntrruptReason(void)
+{
+    return readRegisterWithMask(0x03, 0b00001111);
+}
