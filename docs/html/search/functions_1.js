@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['calibraterco',['calibrateRCO',['../classAS3935.html#ab0cfd4523be09c3e92d874472c8d0650',1,'AS3935']]],
-  ['clearstats',['clearStats',['../classAS3935.html#a3d155965989392aaad3755a98e9f4bcf',1,'AS3935']]]
+  ['begin',['begin',['../classAS3935.html#a75542117963fb6a48f6bf257bca06c41',1,'AS3935::begin(void)'],['../classAS3935.html#a3ea6e01becd6faac61daf92ff6a8f7d3',1,'AS3935::begin(int sda, int scl)']]]
 ];

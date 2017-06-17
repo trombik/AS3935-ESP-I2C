@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
   <compound refid="classAS3935" kind="class"><name>AS3935</name>
-    <member refid="classAS3935_1aab2e60c79c7cc8b11d0eb7fde5a3727b" kind="variable"><name>_i2c_address</name></member>
-    <member refid="classAS3935_1a479fc18d5a6da01d7468fcb641501109" kind="variable"><name>_int_pin</name></member>
-    <member refid="classAS3935_1ad48d879c37d90ea0f33dbda12b66d2ff" kind="variable"><name>_default_sda</name></member>
-    <member refid="classAS3935_1a32c8e31aae96d72ad6fe902066e0c8e2" kind="variable"><name>_default_scl</name></member>
-    <member refid="classAS3935_1adf556a2d0496b0a39d999a761aef9041" kind="function"><name>AS3935</name></member>
+    <member refid="classAS3935_1a8e6af7fb0f6cdbc071e2f8a87963dcac" kind="variable"><name>_address</name></member>
+    <member refid="classAS3935_1a25e169c7c2c973c139d434aebab0801f" kind="variable"><name>_interruptPin</name></member>
+    <member refid="classAS3935_1abccb9dabf620e753131e93922bb673ae" kind="variable"><name>_defaultSDA</name></member>
+    <member refid="classAS3935_1abb9c5a6708b2aea26a46336ce2d8057a" kind="variable"><name>_defaultSCL</name></member>
+    <member refid="classAS3935_1ac8546848906ceee3d8265eae7307695b" kind="function"><name>AS3935</name></member>
     <member refid="classAS3935_1a527270c68aac74d36d126a67ec684df4" kind="function"><name>~AS3935</name></member>
     <member refid="classAS3935_1a75542117963fb6a48f6bf257bca06c41" kind="function"><name>begin</name></member>
     <member refid="classAS3935_1a3ea6e01becd6faac61daf92ff6a8f7d3" kind="function"><name>begin</name></member>

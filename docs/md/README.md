@@ -10,7 +10,7 @@
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`public  `[`AS3935`](#classAS3935_1adf556a2d0496b0a39d999a761aef9041)`(uint8_t i2c_address,uint8_t int_pin)` | 
+`public  `[`AS3935`](#classAS3935_1ac8546848906ceee3d8265eae7307695b)`(uint8_t address,uint8_t interruptPin)` | Constructor.
 `public  `[`~AS3935`](#classAS3935_1a527270c68aac74d36d126a67ec684df4)`(void)` | 
 `public void `[`begin`](#classAS3935_1a75542117963fb6a48f6bf257bca06c41)`(void)` | Begin using the object with default SDA, and SCL pin numbers.
 `public void `[`begin`](#classAS3935_1a3ea6e01becd6faac61daf92ff6a8f7d3)`(int sda,int scl)` | Begin using the object
@@ -35,7 +35,9 @@
 
 ## Members
 
-#### `public  `[`AS3935`](#classAS3935_1adf556a2d0496b0a39d999a761aef9041)`(uint8_t i2c_address,uint8_t int_pin)` 
+#### `public  `[`AS3935`](#classAS3935_1ac8546848906ceee3d8265eae7307695b)`(uint8_t address,uint8_t interruptPin)` 
+
+Constructor.
 
 #### `public  `[`~AS3935`](#classAS3935_1a527270c68aac74d36d126a67ec684df4)`(void)` 
 

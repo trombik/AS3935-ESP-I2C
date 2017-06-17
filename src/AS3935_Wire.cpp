@@ -6,10 +6,13 @@
  * an exercise for me to write a library.
  */
 
-AS3935::AS3935(uint8_t i2c_address, uint8_t int_pin)
+/**
+ * Constructor.
+ */
+AS3935::AS3935(uint8_t address, uint8_t interruptPin)
 {
-  _i2c_address = i2c_address;
-  _int_pin = int_pin;
+  _address = address;
+  _interruptPin = interruptPin;
 }
 
 AS3935::AS3935::~AS3935()
@@ -21,7 +24,7 @@ AS3935::AS3935::~AS3935()
  */
 void AS3935::begin()
 {
-    begin((int) _default_sda, (int) _default_scl);
+    begin((int) _defaultSDA, (int) _defaultSCL);
 }
 
 /**
@@ -33,7 +36,7 @@ void AS3935::begin()
 void AS3935::begin(int sda, int scl)
 {
     Wire.begin(sda, scl);
-    pinMode(_int_pin, INPUT);
+    pinMode(_interruptPin, INPUT);
     disableOscillators();
 }
 
@@ -58,10 +61,10 @@ uint8_t AS3935::_getShift(uint8_t mask)
 uint8_t AS3935::readRegister(uint8_t reg)
 {
     uint8_t v;
-    Wire.beginTransmission(_i2c_address);
+    Wire.beginTransmission(_address);
     Wire.write(reg);
     Wire.endTransmission(false);
-    Wire.requestFrom((int)_i2c_address, 1);
+    Wire.requestFrom((int)_address, 1);
     v = Wire.read();
     return v;
 }
@@ -92,7 +95,7 @@ void AS3935::writeRegisterWithMask(uint8_t reg, uint8_t mask, uint8_t value)
     registerValue = readRegister(reg);
     registerValue &= ~(mask);
     registerValue |= ((value << (_getShift(mask))) & mask);
-    Wire.beginTransmission(_i2c_address);
+    Wire.beginTransmission(_address);
     Wire.write(reg);
     Wire.write(registerValue);
     Wire.endTransmission();

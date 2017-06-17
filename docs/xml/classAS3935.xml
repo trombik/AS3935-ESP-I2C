@@ -3,11 +3,11 @@
   <compounddef id="classAS3935" kind="class" language="C++" prot="public">
     <compoundname>AS3935</compoundname>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classAS3935_1aab2e60c79c7cc8b11d0eb7fde5a3727b" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classAS3935_1a8e6af7fb0f6cdbc071e2f8a87963dcac" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
-        <definition>uint8_t AS3935::_i2c_address</definition>
+        <definition>uint8_t AS3935::_address</definition>
         <argsstring></argsstring>
-        <name>_i2c_address</name>
+        <name>_address</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -16,11 +16,11 @@
         </inbodydescription>
         <location file="src/AS3935.h" line="39" column="1" bodyfile="src/AS3935.h" bodystart="39" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classAS3935_1a479fc18d5a6da01d7468fcb641501109" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classAS3935_1a25e169c7c2c973c139d434aebab0801f" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
-        <definition>uint8_t AS3935::_int_pin</definition>
+        <definition>uint8_t AS3935::_interruptPin</definition>
         <argsstring></argsstring>
-        <name>_int_pin</name>
+        <name>_interruptPin</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -29,11 +29,11 @@
         </inbodydescription>
         <location file="src/AS3935.h" line="40" column="1" bodyfile="src/AS3935.h" bodystart="40" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classAS3935_1ad48d879c37d90ea0f33dbda12b66d2ff" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classAS3935_1abccb9dabf620e753131e93922bb673ae" prot="private" static="no" mutable="no">
         <type>const uint8_t</type>
-        <definition>const uint8_t AS3935::_default_sda</definition>
+        <definition>const uint8_t AS3935::_defaultSDA</definition>
         <argsstring></argsstring>
-        <name>_default_sda</name>
+        <name>_defaultSDA</name>
         <initializer>= SDA</initializer>
         <briefdescription>
         </briefdescription>
@@ -43,11 +43,11 @@
         </inbodydescription>
         <location file="src/AS3935.h" line="41" column="1" bodyfile="src/AS3935.h" bodystart="41" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classAS3935_1a32c8e31aae96d72ad6fe902066e0c8e2" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classAS3935_1abb9c5a6708b2aea26a46336ce2d8057a" prot="private" static="no" mutable="no">
         <type>const uint8_t</type>
-        <definition>const uint8_t AS3935::_default_scl</definition>
+        <definition>const uint8_t AS3935::_defaultSCL</definition>
         <argsstring></argsstring>
-        <name>_default_scl</name>
+        <name>_defaultSCL</name>
         <initializer>= SCL</initializer>
         <briefdescription>
         </briefdescription>
@@ -59,26 +59,26 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classAS3935_1adf556a2d0496b0a39d999a761aef9041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classAS3935_1ac8546848906ceee3d8265eae7307695b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>AS3935::AS3935</definition>
-        <argsstring>(uint8_t i2c_address, uint8_t int_pin)</argsstring>
+        <argsstring>(uint8_t address, uint8_t interruptPin)</argsstring>
         <name>AS3935</name>
         <param>
           <type>uint8_t</type>
-          <declname>i2c_address</declname>
+          <declname>address</declname>
         </param>
         <param>
           <type>uint8_t</type>
-          <declname>int_pin</declname>
+          <declname>interruptPin</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="15" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="9" bodyend="13"/>
+        <location file="src/AS3935.h" line="15" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="12" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a527270c68aac74d36d126a67ec684df4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -110,7 +110,7 @@
 <para>Begin using the object with default SDA, and SCL pin numbers. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="17" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="22" bodyend="25"/>
+        <location file="src/AS3935.h" line="17" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a3ea6e01becd6faac61daf92ff6a8f7d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -133,7 +133,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="18" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="33" bodyend="38"/>
+        <location file="src/AS3935.h" line="18" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="36" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a584f473e60e2a5c194cbf89b86f47827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -159,7 +159,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="19" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="58" bodyend="67"/>
+        <location file="src/AS3935.h" line="19" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="61" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -196,7 +196,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="20" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="76" bodyend="81"/>
+        <location file="src/AS3935.h" line="20" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="79" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -243,7 +243,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="21" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="89" bodyend="99"/>
+        <location file="src/AS3935.h" line="21" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="92" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a48b69ea6c7517619ccdf7a0b78cb670e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -279,7 +279,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="22" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="106" bodyend="109"/>
+        <location file="src/AS3935.h" line="22" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="109" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1ada8b8b208c3247a580fd98f817d658f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -295,7 +295,7 @@
 <para>Sets all registers in default mode </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="23" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="114" bodyend="117"/>
+        <location file="src/AS3935.h" line="23" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="117" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1ab0cfd4523be09c3e92d874472c8d0650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -311,7 +311,7 @@
 <para>Calibrates the internal RC Oscillators automatically </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="24" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="122" bodyend="125"/>
+        <location file="src/AS3935.h" line="24" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="125" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1affd3cfa6277c479da8e15d0f63c2240f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -327,7 +327,7 @@
 <para>Disable LCO/SRCO/TRCO on IRQ pin. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="25" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="130" bodyend="133"/>
+        <location file="src/AS3935.h" line="25" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="133" bodyend="136"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1af8e6b140e4d495de1fde1586c9a037e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -344,7 +344,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="26" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="139" bodyend="142"/>
+        <location file="src/AS3935.h" line="26" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="142" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a7757e3320432cf7aa037a56a204d5946" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -361,7 +361,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="27" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="150" bodyend="209"/>
+        <location file="src/AS3935.h" line="27" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="153" bodyend="212"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a0ffdb4dfbe9809c0132cee79ebc1bd5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -378,7 +378,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="28" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="215" bodyend="218"/>
+        <location file="src/AS3935.h" line="28" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="218" bodyend="221"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -395,7 +395,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="29" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="224" bodyend="228"/>
+        <location file="src/AS3935.h" line="29" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="227" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a50d484a2b9cf94415a53f85a739956c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -421,7 +421,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="30" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="235" bodyend="238"/>
+        <location file="src/AS3935.h" line="30" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="238" bodyend="241"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1ac9a95f6e666a87fac4f20d211af2fe50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -438,7 +438,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="31" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="244" bodyend="247"/>
+        <location file="src/AS3935.h" line="31" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="247" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -463,7 +463,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="32" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="254" bodyend="258"/>
+        <location file="src/AS3935.h" line="32" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="257" bodyend="261"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1aea4888bce6d95ecd15455eb5c646ecf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -489,7 +489,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="33" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="265" bodyend="268"/>
+        <location file="src/AS3935.h" line="33" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="268" bodyend="271"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -506,7 +506,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="34" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="275" bodyend="294"/>
+        <location file="src/AS3935.h" line="34" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="278" bodyend="297"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a101cee8826bf70b18a50bfbbe2bd2133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -532,7 +532,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="35" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="301" bodyend="308"/>
+        <location file="src/AS3935.h" line="35" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="304" bodyend="311"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -548,7 +548,7 @@
 <para>Clear the statistics built up by the lightning distance estimation algorithm block. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="36" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="314" bodyend="322"/>
+        <location file="src/AS3935.h" line="36" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="317" bodyend="325"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -576,7 +576,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="43" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="45" bodyend="51"/>
+        <location file="src/AS3935.h" line="43" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="48" bodyend="54"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -585,12 +585,12 @@
     </detaileddescription>
     <location file="src/AS3935.h" line="13" column="1" bodyfile="src/AS3935.h" bodystart="12" bodyend="44"/>
     <listofallmembers>
-      <member refid="classAS3935_1a32c8e31aae96d72ad6fe902066e0c8e2" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_default_scl</name></member>
-      <member refid="classAS3935_1ad48d879c37d90ea0f33dbda12b66d2ff" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_default_sda</name></member>
+      <member refid="classAS3935_1a8e6af7fb0f6cdbc071e2f8a87963dcac" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_address</name></member>
+      <member refid="classAS3935_1abb9c5a6708b2aea26a46336ce2d8057a" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_defaultSCL</name></member>
+      <member refid="classAS3935_1abccb9dabf620e753131e93922bb673ae" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_defaultSDA</name></member>
       <member refid="classAS3935_1a800361ecee19c6413c96186efbaf37b5" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_getShift</name></member>
-      <member refid="classAS3935_1aab2e60c79c7cc8b11d0eb7fde5a3727b" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_i2c_address</name></member>
-      <member refid="classAS3935_1a479fc18d5a6da01d7468fcb641501109" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_int_pin</name></member>
-      <member refid="classAS3935_1adf556a2d0496b0a39d999a761aef9041" prot="public" virt="non-virtual"><scope>AS3935</scope><name>AS3935</name></member>
+      <member refid="classAS3935_1a25e169c7c2c973c139d434aebab0801f" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_interruptPin</name></member>
+      <member refid="classAS3935_1ac8546848906ceee3d8265eae7307695b" prot="public" virt="non-virtual"><scope>AS3935</scope><name>AS3935</name></member>
       <member refid="classAS3935_1a75542117963fb6a48f6bf257bca06c41" prot="public" virt="non-virtual"><scope>AS3935</scope><name>begin</name></member>
       <member refid="classAS3935_1a3ea6e01becd6faac61daf92ff6a8f7d3" prot="public" virt="non-virtual"><scope>AS3935</scope><name>begin</name></member>
       <member refid="classAS3935_1ab0cfd4523be09c3e92d874472c8d0650" prot="public" virt="non-virtual"><scope>AS3935</scope><name>calibrateRCO</name></member>
