@@ -207,3 +207,35 @@ int8_t AS3935::getDistance(void)
     }
     return d;
 }
+
+bool AS3935::isIndoor()
+{
+    return readRegisterWithMask(0x00, 0b11000001) == AS3935_AFE_INDOOR;
+}
+
+bool AS3935::setIndoor()
+{
+    writeRegisterWithMask(0x00, 0b11000001, AS3935_AFE_INDOOR);
+    return isIndoor();
+}
+
+bool AS3935::setIndoor(bool enable)
+{
+    return enable ? setIndoor() : setOutdoor();
+}
+
+bool AS3935::isOutdoor()
+{
+    return readRegisterWithMask(0x00, 0b11000001) == AS3935_AFE_OUTDOOR;
+}
+
+bool AS3935::setOutdoor()
+{
+    writeRegisterWithMask(0x00, 0b11000001, AS3935_AFE_OUTDOOR);
+    return isOutdoor();
+}
+
+bool AS3935::setOutdoor(bool enable)
+{
+    return enable ? setOutdoor() : setIndoor();
+}
