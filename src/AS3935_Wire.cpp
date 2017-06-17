@@ -140,3 +140,70 @@ uint8_t AS3935::getIntrruptReason(void)
 {
     return readRegisterWithMask(0x03, 0b00001111);
 }
+
+/**
+ * Return the estimated distance in km to the head of an approaching storm.
+ * @return int8_t value of the estimated distance in km,
+ * AS3935_DISTANCE_OUT_OF_RANGE when out of range, or -1 when the register
+ * value is invalid. See also: 8.9.3 Statistical Distance Estimation
+ */
+int8_t AS3935::getDistance(void)
+{
+    uint8_t v;
+    int8_t d;
+    v = readRegisterWithMask(0x07, 0b00111111);
+    switch(v) {
+        case 0b111111:
+            d = AS3935_DISTANCE_OUT_OF_RANGE;
+            break;
+        case 0b101000:
+            d = 40;
+            break;
+        case 0b100101:
+            d = 37;
+            break;
+        case 0b100010:
+            d = 34;
+            break;
+        case 0b011111:
+            d = 31;
+            break;
+        case 0b011011:
+            d = 27;
+            break;
+        case 0b011000:
+            d = 24;
+            break;
+        case 0b010100:
+            d = 20;
+            break;
+        case 0b010001:
+            d = 17;
+            break;
+        case 0b001110:
+            d = 14;
+            break;
+        case 0b001100:
+            d = 12;
+            break;
+        case 0b001010:
+            d = 10;
+            break;
+        case 0b001000:
+            d = 8;
+            break;
+        case 0b000110:
+            d = 6;
+            break;
+        case 0b000101:
+            d = 5;
+            break;
+        case 0b000001:
+            d = 0;
+            break;
+        default:
+            d = -1;
+            break;
+    }
+    return d;
+}

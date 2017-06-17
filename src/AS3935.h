@@ -5,6 +5,7 @@
 static const uint8_t AS3935_INT_STRIKE = 0x08;
 static const uint8_t AS3935_INT_DISTURBER = 0x04;
 static const uint8_t AS3935_INT_NOISE = 0x01;
+static const int8_t  AS3935_DISTANCE_OUT_OF_RANGE = -2;
 
 class AS3935
 {
@@ -21,6 +22,7 @@ public:
     void calibrateRCO(void);
     void disableOscillators(void);
     uint8_t getIntrruptReason(void);
+    int8_t getDistance(void);
 
 private:
     uint8_t _i2c_address;
