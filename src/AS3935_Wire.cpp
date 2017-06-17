@@ -294,7 +294,7 @@ uint8_t AS3935::getMinimumLightning(void)
 }
 
 /**
- * Set minimum number of lightning
+ * Set minimum number of lightning to trigger an event
  * @param uint8_t number, one of 1, 5, 9, or 16.
  * @return bool whether or not setting the value succeeded.
  */
