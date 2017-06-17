@@ -1,0 +1,617 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classAS3935" kind="class" language="C++" prot="public">
+    <compoundname>AS3935</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAS3935_1aab2e60c79c7cc8b11d0eb7fde5a3727b" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AS3935::_i2c_address</definition>
+        <argsstring></argsstring>
+        <name>_i2c_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="39" column="1" bodyfile="src/AS3935.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAS3935_1a479fc18d5a6da01d7468fcb641501109" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AS3935::_int_pin</definition>
+        <argsstring></argsstring>
+        <name>_int_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="40" column="1" bodyfile="src/AS3935.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAS3935_1ad48d879c37d90ea0f33dbda12b66d2ff" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AS3935::_default_sda</definition>
+        <argsstring></argsstring>
+        <name>_default_sda</name>
+        <initializer>= SDA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="41" column="1" bodyfile="src/AS3935.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAS3935_1a32c8e31aae96d72ad6fe902066e0c8e2" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AS3935::_default_scl</definition>
+        <argsstring></argsstring>
+        <name>_default_scl</name>
+        <initializer>= SCL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="42" column="1" bodyfile="src/AS3935.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAS3935_1adf556a2d0496b0a39d999a761aef9041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AS3935::AS3935</definition>
+        <argsstring>(uint8_t i2c_address, uint8_t int_pin)</argsstring>
+        <name>AS3935</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>i2c_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>int_pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="15" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a527270c68aac74d36d126a67ec684df4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AS3935::~AS3935</definition>
+        <argsstring>(void)</argsstring>
+        <name>~AS3935</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a75542117963fb6a48f6bf257bca06c41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AS3935::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Begin using the object with default SDA, and SCL pin numbers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="17" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a3ea6e01becd6faac61daf92ff6a8f7d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AS3935::begin</definition>
+        <argsstring>(int sda, int scl)</argsstring>
+        <name>begin</name>
+        <param>
+          <type>int</type>
+          <declname>sda</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Begin using the object<itemizedlist>
+<listitem><para>Begin wire</para></listitem><listitem><para>Enable interrupt pin as INPUT</para></listitem><listitem><para>Disable Oscillators on interrupt pin. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="18" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a584f473e60e2a5c194cbf89b86f47827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AS3935::readRegister</definition>
+        <argsstring>(uint8_t reg)</argsstring>
+        <name>readRegister</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read a byte from a register. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The register address </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value in the register </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="19" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="58" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AS3935::readRegisterWithMask</definition>
+        <argsstring>(uint8_t reg, uint8_t mask)</argsstring>
+        <name>readRegisterWithMask</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read a byte from a register, return a masked and shifted value <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The register address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mask to use when shifting contents </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An uint8_t with the right most bits containing the masked and shifted contents of the requested register </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="20" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AS3935::writeRegisterWithMask</definition>
+        <argsstring>(uint8_t reg, uint8_t mask, uint8_t value)</argsstring>
+        <name>writeRegisterWithMask</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a masked value to register reg, preserving other bits <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The register address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bitmask to mask </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to write to the register </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="21" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="89" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a48b69ea6c7517619ccdf7a0b78cb670e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AS3935::writeRegister</definition>
+        <argsstring>(uint8_t reg, uint8_t value)</argsstring>
+        <name>writeRegister</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write value to register reg. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the register address to write value to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write to the register. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="22" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1ada8b8b208c3247a580fd98f817d658f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AS3935::setDefault</definition>
+        <argsstring>(void)</argsstring>
+        <name>setDefault</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets all registers in default mode </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="23" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1ab0cfd4523be09c3e92d874472c8d0650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AS3935::calibrateRCO</definition>
+        <argsstring>(void)</argsstring>
+        <name>calibrateRCO</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calibrates the internal RC Oscillators automatically </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="24" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1affd3cfa6277c479da8e15d0f63c2240f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AS3935::disableOscillators</definition>
+        <argsstring>(void)</argsstring>
+        <name>disableOscillators</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disable LCO/SRCO/TRCO on IRQ pin. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="25" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1af8e6b140e4d495de1fde1586c9a037e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AS3935::getIntrruptReason</definition>
+        <argsstring>(void)</argsstring>
+        <name>getIntrruptReason</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get intrrupt reason <simplesect kind="return"><para>one of AS3935_INT_STRIKE, AS3935_INT_DISTURBER, AS3935_INT_NOISE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="26" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a7757e3320432cf7aa037a56a204d5946" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t AS3935::getDistance</definition>
+        <argsstring>(void)</argsstring>
+        <name>getDistance</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the estimated distance in km to the head of an approaching storm. <simplesect kind="return"><para>int8_t value of the estimated distance in km, AS3935_DISTANCE_OUT_OF_RANGE when out of range, or -1 when the register value is invalid. See also: 8.9.3 Statistical Distance Estimation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="27" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="150" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a0ffdb4dfbe9809c0132cee79ebc1bd5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AS3935::isIndoor</definition>
+        <argsstring>(void)</argsstring>
+        <name>isIndoor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns bool whether or not current AFE setting is indoor. <simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="28" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="215" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AS3935::setIndoor</definition>
+        <argsstring>(void)</argsstring>
+        <name>setIndoor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set AFE setting to indoor mode <simplesect kind="return"><para>true or false whether if setting to indoor mode succeeded. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="29" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="224" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a50d484a2b9cf94415a53f85a739956c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AS3935::setIndoor</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>setIndoor</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set or unset AFE setting to indoor mode. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true or false whether if setting to indoor mode succeeded. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="30" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1ac9a95f6e666a87fac4f20d211af2fe50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AS3935::isOutdoor</definition>
+        <argsstring>(void)</argsstring>
+        <name>isOutdoor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns bool whether or not current AFE setting is outdoor. <simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="31" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AS3935::setOutdoor</definition>
+        <argsstring>(void)</argsstring>
+        <name>setOutdoor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set or unset AFE setting to outdoor mode. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true or false whether if setting to outdoor mode succeeded. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="32" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="254" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1aea4888bce6d95ecd15455eb5c646ecf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AS3935::setOutdoor</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>setOutdoor</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set or unset AFE setting to outdoor mode. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true or false whether if setting to outdoor mode succeeded. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="33" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="265" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AS3935::getMinimumLightning</definition>
+        <argsstring>(void)</argsstring>
+        <name>getMinimumLightning</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get minimum number of lightning <simplesect kind="return"><para>uint8_t number of minimum number of lightning, one of 1, 5, 9, or 16. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="34" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="275" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a101cee8826bf70b18a50bfbbe2bd2133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AS3935::setMinimumLightning</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>setMinimumLightning</name>
+        <param>
+          <type>uint8_t</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set minimum number of lightning to trigger an event <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number, one of 1, 5, 9, or 16. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool whether or not setting the value succeeded. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="35" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="301" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AS3935::clearStats</definition>
+        <argsstring>(void)</argsstring>
+        <name>clearStats</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear the statistics built up by the lightning distance estimation algorithm block. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="36" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="314" bodyend="322"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classAS3935_1a800361ecee19c6413c96186efbaf37b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AS3935::_getShift</definition>
+        <argsstring>(uint8_t mask)</argsstring>
+        <name>_getShift</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find the shift required to make the mask use the LSB. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mask to find the shift of </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bit positions to shift the mask </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="43" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="45" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/AS3935.h" line="13" column="1" bodyfile="src/AS3935.h" bodystart="12" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classAS3935_1a32c8e31aae96d72ad6fe902066e0c8e2" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_default_scl</name></member>
+      <member refid="classAS3935_1ad48d879c37d90ea0f33dbda12b66d2ff" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_default_sda</name></member>
+      <member refid="classAS3935_1a800361ecee19c6413c96186efbaf37b5" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_getShift</name></member>
+      <member refid="classAS3935_1aab2e60c79c7cc8b11d0eb7fde5a3727b" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_i2c_address</name></member>
+      <member refid="classAS3935_1a479fc18d5a6da01d7468fcb641501109" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_int_pin</name></member>
+      <member refid="classAS3935_1adf556a2d0496b0a39d999a761aef9041" prot="public" virt="non-virtual"><scope>AS3935</scope><name>AS3935</name></member>
+      <member refid="classAS3935_1a75542117963fb6a48f6bf257bca06c41" prot="public" virt="non-virtual"><scope>AS3935</scope><name>begin</name></member>
+      <member refid="classAS3935_1a3ea6e01becd6faac61daf92ff6a8f7d3" prot="public" virt="non-virtual"><scope>AS3935</scope><name>begin</name></member>
+      <member refid="classAS3935_1ab0cfd4523be09c3e92d874472c8d0650" prot="public" virt="non-virtual"><scope>AS3935</scope><name>calibrateRCO</name></member>
+      <member refid="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" prot="public" virt="non-virtual"><scope>AS3935</scope><name>clearStats</name></member>
+      <member refid="classAS3935_1affd3cfa6277c479da8e15d0f63c2240f" prot="public" virt="non-virtual"><scope>AS3935</scope><name>disableOscillators</name></member>
+      <member refid="classAS3935_1a7757e3320432cf7aa037a56a204d5946" prot="public" virt="non-virtual"><scope>AS3935</scope><name>getDistance</name></member>
+      <member refid="classAS3935_1af8e6b140e4d495de1fde1586c9a037e3" prot="public" virt="non-virtual"><scope>AS3935</scope><name>getIntrruptReason</name></member>
+      <member refid="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" prot="public" virt="non-virtual"><scope>AS3935</scope><name>getMinimumLightning</name></member>
+      <member refid="classAS3935_1a0ffdb4dfbe9809c0132cee79ebc1bd5d" prot="public" virt="non-virtual"><scope>AS3935</scope><name>isIndoor</name></member>
+      <member refid="classAS3935_1ac9a95f6e666a87fac4f20d211af2fe50" prot="public" virt="non-virtual"><scope>AS3935</scope><name>isOutdoor</name></member>
+      <member refid="classAS3935_1a584f473e60e2a5c194cbf89b86f47827" prot="public" virt="non-virtual"><scope>AS3935</scope><name>readRegister</name></member>
+      <member refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" prot="public" virt="non-virtual"><scope>AS3935</scope><name>readRegisterWithMask</name></member>
+      <member refid="classAS3935_1ada8b8b208c3247a580fd98f817d658f1" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setDefault</name></member>
+      <member refid="classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setIndoor</name></member>
+      <member refid="classAS3935_1a50d484a2b9cf94415a53f85a739956c7" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setIndoor</name></member>
+      <member refid="classAS3935_1a101cee8826bf70b18a50bfbbe2bd2133" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setMinimumLightning</name></member>
+      <member refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setOutdoor</name></member>
+      <member refid="classAS3935_1aea4888bce6d95ecd15455eb5c646ecf5" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setOutdoor</name></member>
+      <member refid="classAS3935_1a48b69ea6c7517619ccdf7a0b78cb670e" prot="public" virt="non-virtual"><scope>AS3935</scope><name>writeRegister</name></member>
+      <member refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" prot="public" virt="non-virtual"><scope>AS3935</scope><name>writeRegisterWithMask</name></member>
+      <member refid="classAS3935_1a527270c68aac74d36d126a67ec684df4" prot="public" virt="non-virtual"><scope>AS3935</scope><name>~AS3935</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
