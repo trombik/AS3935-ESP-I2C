@@ -8,6 +8,8 @@
 
 /**
  * Constructor.
+ * @param address I2C address of AS3935.
+ * @param interruptPin pin that is tied to IRQ pin of AS3935.
  */
 AS3935::AS3935(uint8_t address, uint8_t interruptPin)
 {
@@ -29,9 +31,13 @@ void AS3935::begin()
 
 /**
  * Begin using the object
+ *
  * - Begin wire
  * - Enable interrupt pin as INPUT
  * - Disable Oscillators on interrupt pin.
+ *
+ * @param sda SDA pin
+ * @param scl SCL pin
  */
 void AS3935::begin(int sda, int scl)
 {
@@ -213,7 +219,7 @@ int8_t AS3935::getDistance(void)
 
 /**
  * Returns bool whether or not current AFE setting is indoor.
- * @return bool
+ * @return true if the setting is indoor, false if not
  */
 bool AS3935::isIndoor()
 {
@@ -242,7 +248,7 @@ bool AS3935::setIndoor(bool enable)
 
 /**
  * Returns bool whether or not current AFE setting is outdoor.
- * @return bool
+ * @return true if the setting is outdoor, false if not
  */
 bool AS3935::isOutdoor()
 {
