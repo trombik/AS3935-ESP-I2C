@@ -311,7 +311,7 @@ bool AS3935::setMinimumLightning(uint8_t n)
  * Clear the statistics built up by the lightning distance estimation algorithm
  * block.
  */
-void clearStats(void)
+void AS3935::clearStats(void)
 {
     writeRegisterWithMask(0x02, 0b10111111, 1);
     delay(2);
