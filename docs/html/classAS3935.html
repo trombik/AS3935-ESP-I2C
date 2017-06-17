@@ -133,6 +133,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a101cee8826bf70b18a50bfbbe2bd2133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d155965989392aaad3755a98e9f4bcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAS3935.html#a3d155965989392aaad3755a98e9f4bcf">clearStats</a> (void)</td></tr>
 <tr class="separator:a3d155965989392aaad3755a98e9f4bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a053f6681f76fe822532796b32154b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAS3935.html#a27a053f6681f76fe822532796b32154b">getNoiseFloor</a> (void)</td></tr>
+<tr class="separator:a27a053f6681f76fe822532796b32154b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a423451d2316612a42e03ef51f601933f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAS3935.html#a423451d2316612a42e03ef51f601933f">setNoiseFloor</a> (int level)</td></tr>
+<tr class="separator:a423451d2316612a42e03ef51f601933f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25cbdb28d34ccb7392c63bacd77f4c7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAS3935.html#ae25cbdb28d34ccb7392c63bacd77f4c7">increaseNoiseFloor</a> (void)</td></tr>
+<tr class="separator:ae25cbdb28d34ccb7392c63bacd77f4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbed826cf7f83a4d598e20e964620d34"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAS3935.html#abbed826cf7f83a4d598e20e964620d34">descreseNoiseFloor</a> (void)</td></tr>
+<tr class="separator:abbed826cf7f83a4d598e20e964620d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac8546848906ceee3d8265eae7307695b"></a>
@@ -259,6 +267,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abbed826cf7f83a4d598e20e964620d34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t AS3935::descreseNoiseFloor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Decrease noise floor level by one. When the level raeches to the minimum value, 0, further call will not decrease the level. </p><dl class="section return"><dt>Returns</dt><dd>The noise floor level after the change. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="affd3cfa6277c479da8e15d0f63c2240f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -324,6 +349,40 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Get minimum number of lightning </p><dl class="section return"><dt>Returns</dt><dd>uint8_t number of minimum number of lightning, one of 1, 5, 9, or 16. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a27a053f6681f76fe822532796b32154b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t AS3935::getNoiseFloor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get noise floor level from <a class="el" href="classAS3935.html">AS3935</a>.  The current noise floor level from the register </p>
+
+</div>
+</div>
+<a class="anchor" id="ae25cbdb28d34ccb7392c63bacd77f4c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t AS3935::increaseNoiseFloor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Increase noise floor level by one. When the level raeches to the maximum value, 7, further call will not increase the level. </p><dl class="section return"><dt>Returns</dt><dd>The noise floor level after the change. </dd></dl>
 
 </div>
 </div>
@@ -495,6 +554,29 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool whether or not setting the value succeeded. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a423451d2316612a42e03ef51f601933f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AS3935::setNoiseFloor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set noise floor level from <a class="el" href="classAS3935.html">AS3935</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>The noise floor level, from 0 to 7, to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true or false whether if setting the level is succeeded </dd></dl>
 
 </div>
 </div>

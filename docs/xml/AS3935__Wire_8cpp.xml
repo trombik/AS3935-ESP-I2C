@@ -256,6 +256,33 @@
 <codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x02,<sp/>0b10111111,<sp/>1);</highlight></codeline>
 <codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(2);</highlight></codeline>
 <codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">AS3935::getNoiseFloor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" kindref="member">readRegisterWithMask</ref>(0x01,<sp/>0b01110000);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">AS3935::setNoiseFloor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)</highlight></codeline>
+<codeline lineno="348"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>&lt;<sp/>0<sp/>||<sp/>level<sp/>&gt;<sp/>7)</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x01,<sp/>0b01110000,<sp/>level);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>()<sp/>==<sp/>level;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1ae25cbdb28d34ccb7392c63bacd77f4c7" kindref="member">AS3935::increaseNoiseFloor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level<sp/>=<sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">setNoiseFloor</ref>(level<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
+<codeline lineno="365"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1abbed826cf7f83a4d598e20e964620d34" kindref="member">AS3935::descreseNoiseFloor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level<sp/>=<sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">setNoiseFloor</ref>(level<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
+<codeline lineno="377"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/AS3935_Wire.cpp"/>
   </compounddef>
