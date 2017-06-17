@@ -238,7 +238,7 @@ bool AS3935::setIndoor()
 
 /**
  * Set or unset AFE setting to indoor mode.
- * @param bool
+ * @param enable True of false whether to set AFE to indoor mode.
  * @return true or false whether if setting to indoor mode succeeded.
  */
 bool AS3935::setIndoor(bool enable)
@@ -256,8 +256,7 @@ bool AS3935::isOutdoor()
 }
 
 /**
- * Set or unset AFE setting to outdoor mode.
- * @param bool
+ * Set the AFE setting to outdoor mode.
  * @return true or false whether if setting to outdoor mode succeeded.
  */
 bool AS3935::setOutdoor()
@@ -268,7 +267,7 @@ bool AS3935::setOutdoor()
 
 /**
  * Set or unset AFE setting to outdoor mode.
- * @param bool
+ * @param enable True of false whether to set AFE to outdoor mode.
  * @return true or false whether if setting to outdoor mode succeeded.
  */
 bool AS3935::setOutdoor(bool enable)
@@ -304,7 +303,7 @@ uint8_t AS3935::getMinimumLightning(void)
 
 /**
  * Set minimum number of lightning to trigger an event
- * @param uint8_t number, one of 1, 5, 9, or 16.
+ * @param n Minimum number of lightnings, one of 1, 5, 9, or 16.
  * @return bool whether or not setting the value succeeded.
  */
 bool AS3935::setMinimumLightning(uint8_t n)
@@ -328,4 +327,50 @@ void AS3935::clearStats(void)
     delay(2);
     writeRegisterWithMask(0x02, 0b10111111, 1);
     delay(2);
+}
+
+/**
+ * Get noise floor level from AS3935.
+ * @return The current noise floor level from the register
+ */
+uint8_t AS3935::getNoiseFloor(void)
+{
+    return readRegisterWithMask(0x01, 0b01110000);
+}
+
+/**
+ * Set noise floor level from AS3935.
+ * @param level The noise floor level, from 0 to 7, to set.
+ * @return true or false whether if setting the level is succeeded
+ */
+bool AS3935::setNoiseFloor(int level)
+{
+    if (level < 0 || level > 7)
+        return false;
+    writeRegisterWithMask(0x01, 0b01110000, level);
+    return getNoiseFloor() == level;
+}
+
+/**
+ * Increase noise floor level by one. When the level raeches to the maximum
+ * value, 7, further call will not increase the level.
+ * @return The noise floor level after the change.
+ */
+uint8_t AS3935::increaseNoiseFloor(void)
+{
+    int level = getNoiseFloor();
+    setNoiseFloor(level + 1);
+    return getNoiseFloor();
+}
+
+/**
+ * Decrease noise floor level by one. When the level raeches to the minimum
+ * value, 0, further call will not decrease the level.
+ * @return The noise floor level after the change.
+ */
+uint8_t AS3935::descreseNoiseFloor(void)
+{
+    int level = getNoiseFloor();
+    setNoiseFloor(level - 1);
+    return getNoiseFloor();
 }
