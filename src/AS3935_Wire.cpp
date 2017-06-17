@@ -329,3 +329,49 @@ void AS3935::clearStats(void)
     writeRegisterWithMask(0x02, 0b10111111, 1);
     delay(2);
 }
+
+/**
+ * Get noise floor level from AS3935.
+ * @retrun The current noise floor level from the register
+ */
+uint8_t AS3935::getNoiseFloor(void)
+{
+    return readRegisterWithMask(0x01, 0b01110000);
+}
+
+/**
+ * Set noise floor level from AS3935.
+ * @param level The noise floor level, from 0 to 7, to set.
+ * @return true or false whether if setting the level is succeeded
+ */
+bool AS3935::setNoiseFloor(int level)
+{
+    if (level < 0 || level > 7)
+        return false;
+    writeRegisterWithMask(0x01, 0b01110000, level);
+    return getNoiseFloor() == level;
+}
+
+/**
+ * Increase noise floor level by one. When the level raeches to the maximum
+ * value, 7, further call will not increase the level.
+ * @return The noise floor level after the change.
+ */
+uint8_t AS3935::increaseNoiseFloor(void)
+{
+    int level = getNoiseFloor();
+    setNoiseFloor(level + 1);
+    return getNoiseFloor();
+}
+
+/**
+ * Decrease noise floor level by one. When the level raeches to the minimum
+ * value, 0, further call will not decrease the level.
+ * @return The noise floor level after the change.
+ */
+uint8_t AS3935::descreseNoiseFloor(void)
+{
+    int level = getNoiseFloor();
+    setNoiseFloor(level - 1);
+    return getNoiseFloor();
+}

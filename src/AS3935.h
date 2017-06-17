@@ -34,6 +34,10 @@ public:
     uint8_t getMinimumLightning(void);
     bool setMinimumLightning(uint8_t);
     void clearStats(void);
+    uint8_t getNoiseFloor(void);
+    bool setNoiseFloor(int level);
+    uint8_t increaseNoiseFloor(void);
+    uint8_t descreseNoiseFloor(void);
 
 private:
     uint8_t _address;
