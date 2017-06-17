@@ -306,3 +306,17 @@ bool AS3935::setMinimumLightning(uint8_t n)
     }
     return false;
 }
+
+/**
+ * Clear the statistics built up by the lightning distance estimation algorithm
+ * block.
+ */
+void clearStats(void)
+{
+    writeRegisterWithMask(0x02, 0b10111111, 1);
+    delay(2);
+    writeRegisterWithMask(0x02, 0b10111111, 0);
+    delay(2);
+    writeRegisterWithMask(0x02, 0b10111111, 1);
+    delay(2);
+}
