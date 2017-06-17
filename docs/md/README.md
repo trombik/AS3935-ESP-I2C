@@ -10,7 +10,7 @@
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`public  `[`AS3935`](#classAS3935_1ac8546848906ceee3d8265eae7307695b)`(uint8_t address,uint8_t interruptPin)` | Constructor.
+`public  `[`AS3935`](#classAS3935_1ac8546848906ceee3d8265eae7307695b)`(uint8_t address,uint8_t interruptPin)` | Constructor. 
 `public  `[`~AS3935`](#classAS3935_1a527270c68aac74d36d126a67ec684df4)`(void)` | 
 `public void `[`begin`](#classAS3935_1a75542117963fb6a48f6bf257bca06c41)`(void)` | Begin using the object with default SDA, and SCL pin numbers.
 `public void `[`begin`](#classAS3935_1a3ea6e01becd6faac61daf92ff6a8f7d3)`(int sda,int scl)` | Begin using the object
@@ -37,7 +37,11 @@
 
 #### `public  `[`AS3935`](#classAS3935_1ac8546848906ceee3d8265eae7307695b)`(uint8_t address,uint8_t interruptPin)` 
 
-Constructor.
+Constructor. 
+#### Parameters
+* `address` I2C address of [AS3935](#classAS3935). 
+
+* `interruptPin` pin that is tied to IRQ pin of [AS3935](#classAS3935).
 
 #### `public  `[`~AS3935`](#classAS3935_1a527270c68aac74d36d126a67ec684df4)`(void)` 
 
@@ -54,6 +58,11 @@ Begin using the object
 * Enable interrupt pin as INPUT
 
 * Disable Oscillators on interrupt pin.
+
+#### Parameters
+* `sda` SDA pin 
+
+* `scl` SCL pin
 
 #### `public uint8_t `[`readRegister`](#classAS3935_1a584f473e60e2a5c194cbf89b86f47827)`(uint8_t reg)` 
 
@@ -121,7 +130,7 @@ int8_t value of the estimated distance in km, AS3935_DISTANCE_OUT_OF_RANGE when 
 
 Returns bool whether or not current AFE setting is indoor. 
 #### Returns
-bool
+true if the setting is indoor, false if not
 
 #### `public bool `[`setIndoor`](#classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803)`(void)` 
 
@@ -142,7 +151,7 @@ true or false whether if setting to indoor mode succeeded.
 
 Returns bool whether or not current AFE setting is outdoor. 
 #### Returns
-bool
+true if the setting is outdoor, false if not
 
 #### `public bool `[`setOutdoor`](#classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c)`(void)` 
 
