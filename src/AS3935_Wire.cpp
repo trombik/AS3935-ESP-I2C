@@ -238,7 +238,7 @@ bool AS3935::setIndoor()
 
 /**
  * Set or unset AFE setting to indoor mode.
- * @param bool
+ * @param enable True of false whether to set AFE to indoor mode.
  * @return true or false whether if setting to indoor mode succeeded.
  */
 bool AS3935::setIndoor(bool enable)
@@ -256,8 +256,7 @@ bool AS3935::isOutdoor()
 }
 
 /**
- * Set or unset AFE setting to outdoor mode.
- * @param bool
+ * Set the AFE setting to outdoor mode.
  * @return true or false whether if setting to outdoor mode succeeded.
  */
 bool AS3935::setOutdoor()
@@ -268,7 +267,7 @@ bool AS3935::setOutdoor()
 
 /**
  * Set or unset AFE setting to outdoor mode.
- * @param bool
+ * @param enable True of false whether to set AFE to outdoor mode.
  * @return true or false whether if setting to outdoor mode succeeded.
  */
 bool AS3935::setOutdoor(bool enable)
@@ -304,7 +303,7 @@ uint8_t AS3935::getMinimumLightning(void)
 
 /**
  * Set minimum number of lightning to trigger an event
- * @param uint8_t number, one of 1, 5, 9, or 16.
+ * @param n Minimum number of lightnings, one of 1, 5, 9, or 16.
  * @return bool whether or not setting the value succeeded.
  */
 bool AS3935::setMinimumLightning(uint8_t n)
@@ -332,7 +331,7 @@ void AS3935::clearStats(void)
 
 /**
  * Get noise floor level from AS3935.
- * @retrun The current noise floor level from the register
+ * @return The current noise floor level from the register
  */
 uint8_t AS3935::getNoiseFloor(void)
 {
