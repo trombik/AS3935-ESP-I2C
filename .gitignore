@@ -1,3 +1,6 @@
 .pioenvs
 .piolibdeps
 *.swp
+/vendor/
+/node_modules/
+/.bundle/
