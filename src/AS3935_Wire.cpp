@@ -208,33 +208,60 @@ int8_t AS3935::getDistance(void)
     return d;
 }
 
+/**
+ * Returns bool whether or not current AFE setting is indoor.
+ * @return bool
+ */
 bool AS3935::isIndoor()
 {
     return readRegisterWithMask(0x00, 0b11000001) == AS3935_AFE_INDOOR;
 }
 
+/**
+ * Set AFE setting to indoor mode
+ * @return true or false whether if setting to indoor mode succeeded.
+ */
 bool AS3935::setIndoor()
 {
     writeRegisterWithMask(0x00, 0b11000001, AS3935_AFE_INDOOR);
     return isIndoor();
 }
 
+/**
+ * Set or unset AFE setting to indoor mode.
+ * @param bool
+ * @return true or false whether if setting to indoor mode succeeded.
+ */
 bool AS3935::setIndoor(bool enable)
 {
     return enable ? setIndoor() : setOutdoor();
 }
 
+/**
+ * Returns bool whether or not current AFE setting is outdoor.
+ * @return bool
+ */
 bool AS3935::isOutdoor()
 {
     return readRegisterWithMask(0x00, 0b11000001) == AS3935_AFE_OUTDOOR;
 }
 
+/**
+ * Set or unset AFE setting to outdoor mode.
+ * @param bool
+ * @return true or false whether if setting to outdoor mode succeeded.
+ */
 bool AS3935::setOutdoor()
 {
     writeRegisterWithMask(0x00, 0b11000001, AS3935_AFE_OUTDOOR);
     return isOutdoor();
 }
 
+/**
+ * Set or unset AFE setting to outdoor mode.
+ * @param bool
+ * @return true or false whether if setting to outdoor mode succeeded.
+ */
 bool AS3935::setOutdoor(bool enable)
 {
     return enable ? setOutdoor() : setIndoor();
