@@ -12,7 +12,7 @@ static const uint8_t AS3935_AFE_OUTDOOR = 0b01110;
 class AS3935
 {
 public:
-    AS3935(uint8_t i2c_address, uint8_t int_pin);
+    AS3935(uint8_t address, uint8_t interruptPin);
     ~AS3935(void);
     void begin(void);
     void begin(int sda, int scl);
@@ -36,10 +36,10 @@ public:
     void clearStats(void);
 
 private:
-    uint8_t _i2c_address;
-    uint8_t _int_pin;
-    const uint8_t _default_sda = SDA; // D4
-    const uint8_t _default_scl = SCL; // D5
+    uint8_t _address;
+    uint8_t _interruptPin;
+    const uint8_t _defaultSDA = SDA; // D4
+    const uint8_t _defaultSCL = SCL; // D5
     uint8_t _getShift(uint8_t mask);
 };
 
