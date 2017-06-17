@@ -27,12 +27,12 @@
 `public bool `[`setIndoor`](#classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803)`(void)` | Set AFE setting to indoor mode 
 `public bool `[`setIndoor`](#classAS3935_1a50d484a2b9cf94415a53f85a739956c7)`(bool enable)` | Set or unset AFE setting to indoor mode. 
 `public bool `[`isOutdoor`](#classAS3935_1ac9a95f6e666a87fac4f20d211af2fe50)`(void)` | Returns bool whether or not current AFE setting is outdoor. 
-`public bool `[`setOutdoor`](#classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c)`(void)` | Set or unset AFE setting to outdoor mode. 
+`public bool `[`setOutdoor`](#classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c)`(void)` | Set the AFE setting to outdoor mode. 
 `public bool `[`setOutdoor`](#classAS3935_1aea4888bce6d95ecd15455eb5c646ecf5)`(bool enable)` | Set or unset AFE setting to outdoor mode. 
 `public uint8_t `[`getMinimumLightning`](#classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3)`(void)` | Get minimum number of lightning 
 `public bool `[`setMinimumLightning`](#classAS3935_1a101cee8826bf70b18a50bfbbe2bd2133)`(uint8_t)` | Set minimum number of lightning to trigger an event 
 `public void `[`clearStats`](#classAS3935_1a3d155965989392aaad3755a98e9f4bcf)`(void)` | Clear the statistics built up by the lightning distance estimation algorithm block.
-`public uint8_t `[`getNoiseFloor`](#classAS3935_1a27a053f6681f76fe822532796b32154b)`(void)` | Get noise floor level from [AS3935](#classAS3935).  The current noise floor level from the register
+`public uint8_t `[`getNoiseFloor`](#classAS3935_1a27a053f6681f76fe822532796b32154b)`(void)` | Get noise floor level from [AS3935](#classAS3935). 
 `public bool `[`setNoiseFloor`](#classAS3935_1a423451d2316612a42e03ef51f601933f)`(int level)` | Set noise floor level from [AS3935](#classAS3935). 
 `public uint8_t `[`increaseNoiseFloor`](#classAS3935_1ae25cbdb28d34ccb7392c63bacd77f4c7)`(void)` | Increase noise floor level by one. When the level raeches to the maximum value, 7, further call will not increase the level. 
 `public uint8_t `[`descreseNoiseFloor`](#classAS3935_1abbed826cf7f83a4d598e20e964620d34)`(void)` | Decrease noise floor level by one. When the level raeches to the minimum value, 0, further call will not decrease the level. 
@@ -146,7 +146,7 @@ true or false whether if setting to indoor mode succeeded.
 
 Set or unset AFE setting to indoor mode. 
 #### Parameters
-* `bool` 
+* `enable` True of false whether to set AFE to indoor mode. 
 
 #### Returns
 true or false whether if setting to indoor mode succeeded.
@@ -159,10 +159,7 @@ true if the setting is outdoor, false if not
 
 #### `public bool `[`setOutdoor`](#classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c)`(void)` 
 
-Set or unset AFE setting to outdoor mode. 
-#### Parameters
-* `bool` 
-
+Set the AFE setting to outdoor mode. 
 #### Returns
 true or false whether if setting to outdoor mode succeeded.
 
@@ -170,7 +167,7 @@ true or false whether if setting to outdoor mode succeeded.
 
 Set or unset AFE setting to outdoor mode. 
 #### Parameters
-* `bool` 
+* `enable` True of false whether to set AFE to outdoor mode. 
 
 #### Returns
 true or false whether if setting to outdoor mode succeeded.
@@ -185,7 +182,7 @@ uint8_t number of minimum number of lightning, one of 1, 5, 9, or 16.
 
 Set minimum number of lightning to trigger an event 
 #### Parameters
-* `uint8_t` number, one of 1, 5, 9, or 16. 
+* `n` Minimum number of lightnings, one of 1, 5, 9, or 16. 
 
 #### Returns
 bool whether or not setting the value succeeded.
@@ -196,7 +193,9 @@ Clear the statistics built up by the lightning distance estimation algorithm blo
 
 #### `public uint8_t `[`getNoiseFloor`](#classAS3935_1a27a053f6681f76fe822532796b32154b)`(void)` 
 
-Get noise floor level from [AS3935](#classAS3935).  The current noise floor level from the register
+Get noise floor level from [AS3935](#classAS3935). 
+#### Returns
+The current noise floor level from the register
 
 #### `public bool `[`setNoiseFloor`](#classAS3935_1a423451d2316612a42e03ef51f601933f)`(int level)` 
 

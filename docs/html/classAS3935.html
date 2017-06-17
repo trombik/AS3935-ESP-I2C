@@ -365,7 +365,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get noise floor level from <a class="el" href="classAS3935.html">AS3935</a>.  The current noise floor level from the register </p>
+<p>Get noise floor level from <a class="el" href="classAS3935.html">AS3935</a>. </p><dl class="section return"><dt>Returns</dt><dd>The current noise floor level from the register </dd></dl>
 
 </div>
 </div>
@@ -526,7 +526,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set or unset AFE setting to indoor mode. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bool</td><td></td></tr>
+    <tr><td class="paramname">enable</td><td>True of false whether to set AFE to indoor mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -549,7 +549,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set minimum number of lightning to trigger an event </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">uint8_t</td><td>number, one of 1, 5, 9, or 16. </td></tr>
+    <tr><td class="paramname">n</td><td>Minimum number of lightnings, one of 1, 5, 9, or 16. </td></tr>
   </table>
   </dd>
 </dl>
@@ -593,13 +593,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set or unset AFE setting to outdoor mode. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bool</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true or false whether if setting to outdoor mode succeeded. </dd></dl>
+<p>Set the AFE setting to outdoor mode. </p><dl class="section return"><dt>Returns</dt><dd>true or false whether if setting to outdoor mode succeeded. </dd></dl>
 
 </div>
 </div>
@@ -618,7 +612,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set or unset AFE setting to outdoor mode. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bool</td><td></td></tr>
+    <tr><td class="paramname">enable</td><td>True of false whether to set AFE to outdoor mode. </td></tr>
   </table>
   </dd>
 </dl>

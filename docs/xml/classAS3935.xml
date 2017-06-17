@@ -441,10 +441,10 @@
         <detaileddescription>
 <para>Set or unset AFE setting to indoor mode. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>bool</parametername>
+<parametername>enable</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para></parameterdescription>
+<para>True of false whether to set AFE to indoor mode. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>true or false whether if setting to indoor mode succeeded. </para></simplesect>
@@ -481,19 +481,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Set or unset AFE setting to outdoor mode. <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>bool</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>true or false whether if setting to outdoor mode succeeded. </para></simplesect>
+<para>Set the AFE setting to outdoor mode. <simplesect kind="return"><para>true or false whether if setting to outdoor mode succeeded. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="32" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="263" bodyend="267"/>
+        <location file="src/AS3935.h" line="32" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="262" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1aea4888bce6d95ecd15455eb5c646ecf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -509,17 +501,17 @@
         <detaileddescription>
 <para>Set or unset AFE setting to outdoor mode. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>bool</parametername>
+<parametername>enable</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para></parameterdescription>
+<para>True of false whether to set AFE to outdoor mode. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>true or false whether if setting to outdoor mode succeeded. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="33" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="274" bodyend="277"/>
+        <location file="src/AS3935.h" line="33" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="273" bodyend="276"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -536,7 +528,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="34" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="284" bodyend="303"/>
+        <location file="src/AS3935.h" line="34" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="283" bodyend="302"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a101cee8826bf70b18a50bfbbe2bd2133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -552,17 +544,17 @@
         <detaileddescription>
 <para>Set minimum number of lightning to trigger an event <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>uint8_t</parametername>
+<parametername>n</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>number, one of 1, 5, 9, or 16. </para></parameterdescription>
+<para>Minimum number of lightnings, one of 1, 5, 9, or 16. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>bool whether or not setting the value succeeded. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="35" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="310" bodyend="317"/>
+        <location file="src/AS3935.h" line="35" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="309" bodyend="316"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -578,7 +570,7 @@
 <para>Clear the statistics built up by the lightning distance estimation algorithm block. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="36" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="323" bodyend="331"/>
+        <location file="src/AS3935.h" line="36" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="322" bodyend="330"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a27a053f6681f76fe822532796b32154b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -591,10 +583,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Get noise floor level from <ref refid="classAS3935" kindref="compound">AS3935</ref>.  The current noise floor level from the register </para>        </detaileddescription>
+<para>Get noise floor level from <ref refid="classAS3935" kindref="compound">AS3935</ref>. <simplesect kind="return"><para>The current noise floor level from the register </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="37" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="337" bodyend="340"/>
+        <location file="src/AS3935.h" line="37" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="336" bodyend="339"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1a423451d2316612a42e03ef51f601933f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -620,7 +613,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="38" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="347" bodyend="353"/>
+        <location file="src/AS3935.h" line="38" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="346" bodyend="352"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1ae25cbdb28d34ccb7392c63bacd77f4c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -637,7 +630,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="39" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="360" bodyend="365"/>
+        <location file="src/AS3935.h" line="39" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="359" bodyend="364"/>
       </memberdef>
       <memberdef kind="function" id="classAS3935_1abbed826cf7f83a4d598e20e964620d34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -654,7 +647,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="40" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="372" bodyend="377"/>
+        <location file="src/AS3935.h" line="40" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="371" bodyend="376"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

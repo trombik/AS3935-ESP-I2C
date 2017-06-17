@@ -206,83 +206,83 @@
 <codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" kindref="member">readRegisterWithMask</ref>(0x00,<sp/>0b11000001)<sp/>==<sp/>AS3935_AFE_OUTDOOR;</highlight></codeline>
 <codeline lineno="256"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="257"><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" kindref="member">AS3935::setOutdoor</ref>()</highlight></codeline>
-<codeline lineno="264"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x00,<sp/>0b11000001,<sp/>AS3935_AFE_OUTDOOR);</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1ac9a95f6e666a87fac4f20d211af2fe50" kindref="member">isOutdoor</ref>();</highlight></codeline>
-<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"></highlight></codeline>
-<codeline lineno="274"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" kindref="member">AS3935::setOutdoor</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
-<codeline lineno="275"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>enable<sp/>?<sp/><ref refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" kindref="member">setOutdoor</ref>()<sp/>:<sp/><ref refid="classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803" kindref="member">setIndoor</ref>();</highlight></codeline>
-<codeline lineno="277"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="278"><highlight class="normal"></highlight></codeline>
-<codeline lineno="284"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" kindref="member">AS3935::getMinimumLightning</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<ref refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" kindref="member">readRegisterWithMask</ref>(0x02,<sp/>0b11001111))<sp/>{</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>5;</highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
-<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>9;</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>16;</highlight></codeline>
-<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>255;</highlight></codeline>
-<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="304"><highlight class="normal"></highlight></codeline>
-<codeline lineno="310"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a101cee8826bf70b18a50bfbbe2bd2133" kindref="member">AS3935::setMinimumLightning</ref>(uint8_t<sp/>n)</highlight></codeline>
-<codeline lineno="311"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>==<sp/>1<sp/>||<sp/>n<sp/>==<sp/>5<sp/>||<sp/>n<sp/>==<sp/>9<sp/>||<sp/>n<sp/>==<sp/>16)<sp/>{</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x02,<sp/>0b11001111,<sp/>n);</highlight></codeline>
-<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" kindref="member">getMinimumLightning</ref>();</highlight></codeline>
-<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="317"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="318"><highlight class="normal"></highlight></codeline>
-<codeline lineno="323"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" kindref="member">AS3935::clearStats</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="324"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x02,<sp/>0b10111111,<sp/>1);</highlight></codeline>
-<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(2);</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x02,<sp/>0b10111111,<sp/>0);</highlight></codeline>
-<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(2);</highlight></codeline>
-<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x02,<sp/>0b10111111,<sp/>1);</highlight></codeline>
-<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(2);</highlight></codeline>
-<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="332"><highlight class="normal"></highlight></codeline>
-<codeline lineno="337"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">AS3935::getNoiseFloor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="338"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" kindref="member">readRegisterWithMask</ref>(0x01,<sp/>0b01110000);</highlight></codeline>
-<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="341"><highlight class="normal"></highlight></codeline>
-<codeline lineno="347"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">AS3935::setNoiseFloor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)</highlight></codeline>
-<codeline lineno="348"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>&lt;<sp/>0<sp/>||<sp/>level<sp/>&gt;<sp/>7)</highlight></codeline>
-<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x01,<sp/>0b01110000,<sp/>level);</highlight></codeline>
-<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>()<sp/>==<sp/>level;</highlight></codeline>
-<codeline lineno="353"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="354"><highlight class="normal"></highlight></codeline>
-<codeline lineno="360"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1ae25cbdb28d34ccb7392c63bacd77f4c7" kindref="member">AS3935::increaseNoiseFloor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="361"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level<sp/>=<sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
-<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">setNoiseFloor</ref>(level<sp/>+<sp/>1);</highlight></codeline>
-<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
-<codeline lineno="365"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="366"><highlight class="normal"></highlight></codeline>
-<codeline lineno="372"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1abbed826cf7f83a4d598e20e964620d34" kindref="member">AS3935::descreseNoiseFloor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="373"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level<sp/>=<sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
-<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">setNoiseFloor</ref>(level<sp/>-<sp/>1);</highlight></codeline>
-<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
-<codeline lineno="377"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" kindref="member">AS3935::setOutdoor</ref>()</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x00,<sp/>0b11000001,<sp/>AS3935_AFE_OUTDOOR);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1ac9a95f6e666a87fac4f20d211af2fe50" kindref="member">isOutdoor</ref>();</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" kindref="member">AS3935::setOutdoor</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>enable<sp/>?<sp/><ref refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" kindref="member">setOutdoor</ref>()<sp/>:<sp/><ref refid="classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803" kindref="member">setIndoor</ref>();</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" kindref="member">AS3935::getMinimumLightning</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<ref refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" kindref="member">readRegisterWithMask</ref>(0x02,<sp/>0b11001111))<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>5;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>9;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>16;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>255;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a101cee8826bf70b18a50bfbbe2bd2133" kindref="member">AS3935::setMinimumLightning</ref>(uint8_t<sp/>n)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>==<sp/>1<sp/>||<sp/>n<sp/>==<sp/>5<sp/>||<sp/>n<sp/>==<sp/>9<sp/>||<sp/>n<sp/>==<sp/>16)<sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x02,<sp/>0b11001111,<sp/>n);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" kindref="member">getMinimumLightning</ref>();</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" kindref="member">AS3935::clearStats</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x02,<sp/>0b10111111,<sp/>1);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(2);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x02,<sp/>0b10111111,<sp/>0);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(2);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x02,<sp/>0b10111111,<sp/>1);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(2);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">AS3935::getNoiseFloor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="337"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" kindref="member">readRegisterWithMask</ref>(0x01,<sp/>0b01110000);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">AS3935::setNoiseFloor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level<sp/>&lt;<sp/>0<sp/>||<sp/>level<sp/>&gt;<sp/>7)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x01,<sp/>0b01110000,<sp/>level);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>()<sp/>==<sp/>level;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1ae25cbdb28d34ccb7392c63bacd77f4c7" kindref="member">AS3935::increaseNoiseFloor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="360"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level<sp/>=<sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">setNoiseFloor</ref>(level<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1abbed826cf7f83a4d598e20e964620d34" kindref="member">AS3935::descreseNoiseFloor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level<sp/>=<sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">setNoiseFloor</ref>(level<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
+<codeline lineno="376"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/AS3935_Wire.cpp"/>
   </compounddef>
