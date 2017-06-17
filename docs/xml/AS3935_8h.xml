@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="AS3935_8h" kind="file" language="C++">
+    <compoundname>AS3935.h</compoundname>
+    <includes local="yes">Arduino.h</includes>
+    <includedby refid="AS3935__Wire_8cpp" local="no">src/AS3935_Wire.cpp</includedby>
+    <incdepgraph>
+      <node id="0">
+        <label>src/AS3935.h</label>
+        <link refid="AS3935.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Arduino.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classAS3935" prot="public">AS3935</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="AS3935_8h_1ae9caac176489ac4842e01b9099ad7143" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AS3935_INT_STRIKE</definition>
+        <argsstring></argsstring>
+        <name>AS3935_INT_STRIKE</name>
+        <initializer>= 0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="5" column="1" bodyfile="src/AS3935.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="AS3935_8h_1ac4efe9f54d9bdfb03a4094fae7a8895b" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AS3935_INT_DISTURBER</definition>
+        <argsstring></argsstring>
+        <name>AS3935_INT_DISTURBER</name>
+        <initializer>= 0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="6" column="1" bodyfile="src/AS3935.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="AS3935_8h_1adbc82ad8a027a0e7c3d862d173a4910b" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AS3935_INT_NOISE</definition>
+        <argsstring></argsstring>
+        <name>AS3935_INT_NOISE</name>
+        <initializer>= 0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="7" column="1" bodyfile="src/AS3935.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="AS3935_8h_1a41a3180dadc1d8d4948eb193e043588b" prot="public" static="yes" mutable="no">
+        <type>const int8_t</type>
+        <definition>const int8_t AS3935_DISTANCE_OUT_OF_RANGE</definition>
+        <argsstring></argsstring>
+        <name>AS3935_DISTANCE_OUT_OF_RANGE</name>
+        <initializer>= -2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="8" column="1" bodyfile="src/AS3935.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="AS3935_8h_1a8471d86e70c5c0244ae33e847eea20d6" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AS3935_AFE_INDOOR</definition>
+        <argsstring></argsstring>
+        <name>AS3935_AFE_INDOOR</name>
+        <initializer>=  0b10010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="9" column="1" bodyfile="src/AS3935.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="AS3935_8h_1aa7ec9cc4f8bd62df9365418d733d6ec6" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AS3935_AFE_OUTDOOR</definition>
+        <argsstring></argsstring>
+        <name>AS3935_AFE_OUTDOOR</name>
+        <initializer>= 0b01110</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="10" column="1" bodyfile="src/AS3935.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>AS3935_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AS3935_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>AS3935_INT_STRIKE<sp/>=<sp/>0x08;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>AS3935_INT_DISTURBER<sp/>=<sp/>0x04;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>AS3935_INT_NOISE<sp/>=<sp/>0x01;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t<sp/><sp/>AS3935_DISTANCE_OUT_OF_RANGE<sp/>=<sp/>-2;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>AS3935_AFE_INDOOR<sp/>=<sp/><sp/>0b10010;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>AS3935_AFE_OUTDOOR<sp/>=<sp/>0b01110;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classAS3935" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAS3935" kindref="compound">AS3935</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935" kindref="compound">AS3935</ref>(uint8_t<sp/>i2c_address,<sp/>uint8_t<sp/>int_pin);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="classAS3935" kindref="compound">AS3935</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a75542117963fb6a48f6bf257bca06c41" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a75542117963fb6a48f6bf257bca06c41" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sda,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scl);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classAS3935_1a584f473e60e2a5c194cbf89b86f47827" kindref="member">readRegister</ref>(uint8_t<sp/>reg);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" kindref="member">readRegisterWithMask</ref>(uint8_t<sp/>reg,<sp/>uint8_t<sp/>mask);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(uint8_t<sp/>reg,<sp/>uint8_t<sp/>mask,<sp/>uint8_t<sp/>value);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a48b69ea6c7517619ccdf7a0b78cb670e" kindref="member">writeRegister</ref>(uint8_t<sp/>reg,<sp/>uint8_t<sp/>value);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1ada8b8b208c3247a580fd98f817d658f1" kindref="member">setDefault</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1ab0cfd4523be09c3e92d874472c8d0650" kindref="member">calibrateRCO</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1affd3cfa6277c479da8e15d0f63c2240f" kindref="member">disableOscillators</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classAS3935_1af8e6b140e4d495de1fde1586c9a037e3" kindref="member">getIntrruptReason</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classAS3935_1a7757e3320432cf7aa037a56a204d5946" kindref="member">getDistance</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a0ffdb4dfbe9809c0132cee79ebc1bd5d" kindref="member">isIndoor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803" kindref="member">setIndoor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803" kindref="member">setIndoor</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1ac9a95f6e666a87fac4f20d211af2fe50" kindref="member">isOutdoor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" kindref="member">setOutdoor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" kindref="member">setOutdoor</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" kindref="member">getMinimumLightning</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a101cee8826bf70b18a50bfbbe2bd2133" kindref="member">setMinimumLightning</ref>(uint8_t);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" kindref="member">clearStats</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>_i2c_address;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>_int_pin;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>_default_sda<sp/>=<sp/>SDA;<sp/></highlight><highlight class="comment">//<sp/>D4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>_default_scl<sp/>=<sp/>SCL;<sp/></highlight><highlight class="comment">//<sp/>D5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>_getShift(uint8_t<sp/>mask);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/AS3935.h"/>
+  </compounddef>
+</doxygen>

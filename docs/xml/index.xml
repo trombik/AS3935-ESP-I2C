@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="classAS3935" kind="class"><name>AS3935</name>
+    <member refid="classAS3935_1aab2e60c79c7cc8b11d0eb7fde5a3727b" kind="variable"><name>_i2c_address</name></member>
+    <member refid="classAS3935_1a479fc18d5a6da01d7468fcb641501109" kind="variable"><name>_int_pin</name></member>
+    <member refid="classAS3935_1ad48d879c37d90ea0f33dbda12b66d2ff" kind="variable"><name>_default_sda</name></member>
+    <member refid="classAS3935_1a32c8e31aae96d72ad6fe902066e0c8e2" kind="variable"><name>_default_scl</name></member>
+    <member refid="classAS3935_1adf556a2d0496b0a39d999a761aef9041" kind="function"><name>AS3935</name></member>
+    <member refid="classAS3935_1a527270c68aac74d36d126a67ec684df4" kind="function"><name>~AS3935</name></member>
+    <member refid="classAS3935_1a75542117963fb6a48f6bf257bca06c41" kind="function"><name>begin</name></member>
+    <member refid="classAS3935_1a3ea6e01becd6faac61daf92ff6a8f7d3" kind="function"><name>begin</name></member>
+    <member refid="classAS3935_1a584f473e60e2a5c194cbf89b86f47827" kind="function"><name>readRegister</name></member>
+    <member refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" kind="function"><name>readRegisterWithMask</name></member>
+    <member refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kind="function"><name>writeRegisterWithMask</name></member>
+    <member refid="classAS3935_1a48b69ea6c7517619ccdf7a0b78cb670e" kind="function"><name>writeRegister</name></member>
+    <member refid="classAS3935_1ada8b8b208c3247a580fd98f817d658f1" kind="function"><name>setDefault</name></member>
+    <member refid="classAS3935_1ab0cfd4523be09c3e92d874472c8d0650" kind="function"><name>calibrateRCO</name></member>
+    <member refid="classAS3935_1affd3cfa6277c479da8e15d0f63c2240f" kind="function"><name>disableOscillators</name></member>
+    <member refid="classAS3935_1af8e6b140e4d495de1fde1586c9a037e3" kind="function"><name>getIntrruptReason</name></member>
+    <member refid="classAS3935_1a7757e3320432cf7aa037a56a204d5946" kind="function"><name>getDistance</name></member>
+    <member refid="classAS3935_1a0ffdb4dfbe9809c0132cee79ebc1bd5d" kind="function"><name>isIndoor</name></member>
+    <member refid="classAS3935_1a2dfca515cd05d3d8a2f21a63ecca9803" kind="function"><name>setIndoor</name></member>
+    <member refid="classAS3935_1a50d484a2b9cf94415a53f85a739956c7" kind="function"><name>setIndoor</name></member>
+    <member refid="classAS3935_1ac9a95f6e666a87fac4f20d211af2fe50" kind="function"><name>isOutdoor</name></member>
+    <member refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" kind="function"><name>setOutdoor</name></member>
+    <member refid="classAS3935_1aea4888bce6d95ecd15455eb5c646ecf5" kind="function"><name>setOutdoor</name></member>
+    <member refid="classAS3935_1acb47e57b90db5fd7076e8f613c21d7d3" kind="function"><name>getMinimumLightning</name></member>
+    <member refid="classAS3935_1a101cee8826bf70b18a50bfbbe2bd2133" kind="function"><name>setMinimumLightning</name></member>
+    <member refid="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" kind="function"><name>clearStats</name></member>
+    <member refid="classAS3935_1a800361ecee19c6413c96186efbaf37b5" kind="function"><name>_getShift</name></member>
+  </compound>
+  <compound refid="AS3935_8h" kind="file"><name>AS3935.h</name>
+    <member refid="AS3935_8h_1ae9caac176489ac4842e01b9099ad7143" kind="variable"><name>AS3935_INT_STRIKE</name></member>
+    <member refid="AS3935_8h_1ac4efe9f54d9bdfb03a4094fae7a8895b" kind="variable"><name>AS3935_INT_DISTURBER</name></member>
+    <member refid="AS3935_8h_1adbc82ad8a027a0e7c3d862d173a4910b" kind="variable"><name>AS3935_INT_NOISE</name></member>
+    <member refid="AS3935_8h_1a41a3180dadc1d8d4948eb193e043588b" kind="variable"><name>AS3935_DISTANCE_OUT_OF_RANGE</name></member>
+    <member refid="AS3935_8h_1a8471d86e70c5c0244ae33e847eea20d6" kind="variable"><name>AS3935_AFE_INDOOR</name></member>
+    <member refid="AS3935_8h_1aa7ec9cc4f8bd62df9365418d733d6ec6" kind="variable"><name>AS3935_AFE_OUTDOOR</name></member>
+  </compound>
+  <compound refid="AS3935__Wire_8cpp" kind="file"><name>AS3935_Wire.cpp</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>
