@@ -266,3 +266,24 @@ bool AS3935::setOutdoor(bool enable)
 {
     return enable ? setOutdoor() : setIndoor();
 }
+
+/**
+ * Get minimum number of lightning
+ * @return uint8_t number of minimum number of lightning.
+ */
+uint8_t AS3935::getMinimumLightning(void)
+{
+    return readRegisterWithMask(0x02, 0b11001111);
+}
+
+/**
+ * Set minimum number of lightning
+ * @param uint8_t number
+ * @return bool whether or not setting the value succeeded.
+ */
+bool AS3935::setMinimumLightning(uint8_t n)
+{
+    if (n <= 3 && n >= 0)
+        writeRegisterWithMask(0x02, 0b11001111, n);
+    return getMinimumLightning();
+}

@@ -31,6 +31,8 @@ public:
     bool isOutdoor(void);
     bool setOutdoor(void);
     bool setOutdoor(bool enable);
+    uint8_t getMinimumLightning(void);
+    bool setMinimumLightning(uint8_t);
 
 private:
     uint8_t _i2c_address;
