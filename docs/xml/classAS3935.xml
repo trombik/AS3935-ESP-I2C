@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="43" column="1" bodyfile="src/AS3935.h" bodystart="43" bodyend="-1"/>
+        <location file="src/AS3935.h" line="45" column="1" bodyfile="src/AS3935.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classAS3935_1a25e169c7c2c973c139d434aebab0801f" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="44" column="1" bodyfile="src/AS3935.h" bodystart="44" bodyend="-1"/>
+        <location file="src/AS3935.h" line="46" column="1" bodyfile="src/AS3935.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classAS3935_1abccb9dabf620e753131e93922bb673ae" prot="private" static="no" mutable="no">
         <type>const uint8_t</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="45" column="1" bodyfile="src/AS3935.h" bodystart="45" bodyend="-1"/>
+        <location file="src/AS3935.h" line="47" column="1" bodyfile="src/AS3935.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classAS3935_1abb9c5a6708b2aea26a46336ce2d8057a" prot="private" static="no" mutable="no">
         <type>const uint8_t</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="46" column="1" bodyfile="src/AS3935.h" bodystart="46" bodyend="-1"/>
+        <location file="src/AS3935.h" line="48" column="1" bodyfile="src/AS3935.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -649,6 +649,58 @@
         </inbodydescription>
         <location file="src/AS3935.h" line="40" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="371" bodyend="376"/>
       </memberdef>
+      <memberdef kind="function" id="classAS3935_1a36a66cea1b70e87dc97bde6bc0688c49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AS3935::setTuningCapacitor</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>setTuningCapacitor</name>
+        <param>
+          <type>uint8_t</type>
+          <defname>cap</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set internal capacitor values, from 0 to 120pF in steps of 8pf. Interrupts are disabled while calibrating. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Integer, from 0 to 15. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the value of the internal capacitor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="41" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="384" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="classAS3935_1a8c1e3a43620d11f834aebdadd8b284d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AS3935::calibrate</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>calibrate</name>
+        <param>
+          <type>uint8_t</type>
+          <defname>cap</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compatibility <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Integer, from 0 to 15. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classAS3935_1a36a66cea1b70e87dc97bde6bc0688c49" kindref="member">AS3935::setTuningCapacitor(uint8_t)</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AS3935.h" line="42" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="403" bodyend="406"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
       <memberdef kind="function" id="classAS3935_1a800361ecee19c6413c96186efbaf37b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -675,14 +727,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AS3935.h" line="47" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="54" bodyend="60"/>
+        <location file="src/AS3935.h" line="49" column="1" bodyfile="src/AS3935_Wire.cpp" bodystart="54" bodyend="60"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/AS3935.h" line="13" column="1" bodyfile="src/AS3935.h" bodystart="12" bodyend="48"/>
+    <location file="src/AS3935.h" line="13" column="1" bodyfile="src/AS3935.h" bodystart="12" bodyend="50"/>
     <listofallmembers>
       <member refid="classAS3935_1a8e6af7fb0f6cdbc071e2f8a87963dcac" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_address</name></member>
       <member refid="classAS3935_1abb9c5a6708b2aea26a46336ce2d8057a" prot="private" virt="non-virtual"><scope>AS3935</scope><name>_defaultSCL</name></member>
@@ -692,6 +744,7 @@
       <member refid="classAS3935_1ac8546848906ceee3d8265eae7307695b" prot="public" virt="non-virtual"><scope>AS3935</scope><name>AS3935</name></member>
       <member refid="classAS3935_1a75542117963fb6a48f6bf257bca06c41" prot="public" virt="non-virtual"><scope>AS3935</scope><name>begin</name></member>
       <member refid="classAS3935_1a3ea6e01becd6faac61daf92ff6a8f7d3" prot="public" virt="non-virtual"><scope>AS3935</scope><name>begin</name></member>
+      <member refid="classAS3935_1a8c1e3a43620d11f834aebdadd8b284d7" prot="public" virt="non-virtual"><scope>AS3935</scope><name>calibrate</name></member>
       <member refid="classAS3935_1ab0cfd4523be09c3e92d874472c8d0650" prot="public" virt="non-virtual"><scope>AS3935</scope><name>calibrateRCO</name></member>
       <member refid="classAS3935_1a3d155965989392aaad3755a98e9f4bcf" prot="public" virt="non-virtual"><scope>AS3935</scope><name>clearStats</name></member>
       <member refid="classAS3935_1abbed826cf7f83a4d598e20e964620d34" prot="public" virt="non-virtual"><scope>AS3935</scope><name>descreseNoiseFloor</name></member>
@@ -712,6 +765,7 @@
       <member refid="classAS3935_1a423451d2316612a42e03ef51f601933f" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setNoiseFloor</name></member>
       <member refid="classAS3935_1a3f069dc7019193600bf5e0c1fd8a700c" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setOutdoor</name></member>
       <member refid="classAS3935_1aea4888bce6d95ecd15455eb5c646ecf5" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setOutdoor</name></member>
+      <member refid="classAS3935_1a36a66cea1b70e87dc97bde6bc0688c49" prot="public" virt="non-virtual"><scope>AS3935</scope><name>setTuningCapacitor</name></member>
       <member refid="classAS3935_1a48b69ea6c7517619ccdf7a0b78cb670e" prot="public" virt="non-virtual"><scope>AS3935</scope><name>writeRegister</name></member>
       <member refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" prot="public" virt="non-virtual"><scope>AS3935</scope><name>writeRegisterWithMask</name></member>
       <member refid="classAS3935_1a527270c68aac74d36d126a67ec684df4" prot="public" virt="non-virtual"><scope>AS3935</scope><name>~AS3935</name></member>

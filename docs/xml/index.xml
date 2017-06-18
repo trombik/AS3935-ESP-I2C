@@ -31,6 +31,8 @@
     <member refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kind="function"><name>setNoiseFloor</name></member>
     <member refid="classAS3935_1ae25cbdb28d34ccb7392c63bacd77f4c7" kind="function"><name>increaseNoiseFloor</name></member>
     <member refid="classAS3935_1abbed826cf7f83a4d598e20e964620d34" kind="function"><name>descreseNoiseFloor</name></member>
+    <member refid="classAS3935_1a36a66cea1b70e87dc97bde6bc0688c49" kind="function"><name>setTuningCapacitor</name></member>
+    <member refid="classAS3935_1a8c1e3a43620d11f834aebdadd8b284d7" kind="function"><name>calibrate</name></member>
     <member refid="classAS3935_1a800361ecee19c6413c96186efbaf37b5" kind="function"><name>_getShift</name></member>
   </compound>
   <compound refid="AS3935_8h" kind="file"><name>AS3935.h</name>

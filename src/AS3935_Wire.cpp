@@ -378,3 +378,33 @@ uint8_t AS3935::descreseNoiseFloor(void)
     setNoiseFloor(level - 1);
     return getNoiseFloor();
 }
+
+/**
+ * Set internal capacitor values, from 0 to 120pF in steps of 8pf. Interrupts
+ * are disabled while calibrating.
+ * @param cap Integer, from 0 to 15.
+ * @return the value of the internal capacitor
+ */
+uint8_t AS3935::setTuningCapacitor(uint8_t cap)
+{
+    if (cap <= 15 || cap >= 0) {
+        noInterrupts();
+        writeRegisterWithMask(0x08, 0b00001111, cap);
+        delay(2);
+        calibrateRCO();
+        writeRegisterWithMask(0x08, 0b00100000, 1);
+        delay(2);
+        writeRegisterWithMask(0x08, 0b00100000, 0);
+        interrupts();
+    }
+    return readRegisterWithMask(0x08, 0b00001111);
+}
+/**
+ * Compatibility
+ * @param cap Integer, from 0 to 15.
+ * @sa AS3935::setTuningCapacitor(uint8_t)
+ */
+void AS3935::calibrate(uint8_t cap)
+{
+    setTuningCapacitor(cap);
+}
