@@ -431,5 +431,4 @@ void AS3935::setLCODivider(uint8_t ratio)
 {
     if (ratio > 0 && ratio < 3)
         writeRegisterWithMask(0x03, 0b00111111, 0);
-    }
 }
