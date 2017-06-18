@@ -283,6 +283,25 @@
 <codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1a423451d2316612a42e03ef51f601933f" kindref="member">setNoiseFloor</ref>(level<sp/>-<sp/>1);</highlight></codeline>
 <codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a27a053f6681f76fe822532796b32154b" kindref="member">getNoiseFloor</ref>();</highlight></codeline>
 <codeline lineno="376"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal">uint8_t<sp/><ref refid="classAS3935_1a36a66cea1b70e87dc97bde6bc0688c49" kindref="member">AS3935::setTuningCapacitor</ref>(uint8_t<sp/>cap)</highlight></codeline>
+<codeline lineno="385"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cap<sp/>&lt;=<sp/>15<sp/>||<sp/>cap<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>noInterrupts();</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x08,<sp/>0b00001111,<sp/>cap);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(2);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAS3935_1ab0cfd4523be09c3e92d874472c8d0650" kindref="member">calibrateRCO</ref>();</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x08,<sp/>0b00100000,<sp/>1);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(2);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAS3935_1aea1d2d14948ff505b237884ff34a7ac3" kindref="member">writeRegisterWithMask</ref>(0x08,<sp/>0b00100000,<sp/>0);</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interrupts();</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a0f9456068c3bd92bfa08db7b3c0b95ef" kindref="member">readRegisterWithMask</ref>(0x08,<sp/>0b00001111);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="403"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAS3935_1a8c1e3a43620d11f834aebdadd8b284d7" kindref="member">AS3935::calibrate</ref>(uint8_t<sp/>cap)</highlight></codeline>
+<codeline lineno="404"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAS3935_1a36a66cea1b70e87dc97bde6bc0688c49" kindref="member">setTuningCapacitor</ref>(cap);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/AS3935_Wire.cpp"/>
   </compounddef>
