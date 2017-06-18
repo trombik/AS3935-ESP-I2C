@@ -38,6 +38,8 @@ public:
     bool setNoiseFloor(int level);
     uint8_t increaseNoiseFloor(void);
     uint8_t descreseNoiseFloor(void);
+    uint8_t setTuningCapacitor(uint8_t);
+    void calibrate(uint8_t);
 
 private:
     uint8_t _address;
