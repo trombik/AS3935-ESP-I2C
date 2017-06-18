@@ -41,7 +41,11 @@ void AS3935::begin()
  */
 void AS3935::begin(int sda, int scl)
 {
+#ifdef ARDUINO_ARCH_AVR
+    Wire.begin();
+#else
     Wire.begin(sda, scl);
+#endif
     pinMode(_interruptPin, INPUT);
     disableOscillators();
 }

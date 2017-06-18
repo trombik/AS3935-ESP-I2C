@@ -42,8 +42,13 @@ public:
 private:
     uint8_t _address;
     uint8_t _interruptPin;
+#ifdef ARDUINO_ARCH_AVR
+    const uint8_t _defaultSDA = A4;
+    const uint8_t _defaultSCL = A5;
+#else
     const uint8_t _defaultSDA = SDA; // D4
     const uint8_t _defaultSCL = SCL; // D5
+#endif
     uint8_t _getShift(uint8_t mask);
 };
 
