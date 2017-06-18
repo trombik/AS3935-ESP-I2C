@@ -408,3 +408,16 @@ void AS3935::calibrate(uint8_t cap)
 {
     setTuningCapacitor(cap);
 }
+
+/**
+ *
+ */
+void AS3935::showResonanceFrequency(void)
+{
+    writeRegisterWithMask(0x08, 0b01111111, 1);
+}
+
+void AS3935::stopResonanceFrequency(void)
+{
+    writeRegisterWithMask(0x08, 0b01111111, 0);
+}

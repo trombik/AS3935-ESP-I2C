@@ -40,6 +40,8 @@ public:
     uint8_t descreseNoiseFloor(void);
     uint8_t setTuningCapacitor(uint8_t);
     void calibrate(uint8_t);
+    void showResonanceFrequency(void);
+    void stopResonanceFrequency(void);
 
 private:
     uint8_t _address;
