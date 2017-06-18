@@ -1,7 +1,11 @@
 #include <AS3935.h>
 #include <Wire.h>
 
+#ifdef ARDUINO_ARCH_AVR
+AS3935 as3935(0x00, 5);
+#else
 AS3935 as3935(0x00, D3);
+#endif
 
 void
 setup()
