@@ -42,6 +42,8 @@ public:
     void calibrate(uint8_t);
     void showResonanceFrequency(void);
     void stopResonanceFrequency(void);
+    uint8_t getLCODivider(void);
+    void setLCODivider(uint8_t);
 
 private:
     uint8_t _address;
